@@ -1,21 +1,18 @@
 /*Toggle,Clear,Set Bit */
 
 #include <stdio.h>
-#include <inttypes.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-void Set_Clear_Toggle(uint32_t data,uint8_t pos)
-{
-    data |=(1<<pos);
-    printf("Set Data=%d",data);
-    data &=~(1<<pos);
-    printf("\nClear Data=%d",data);
-    data ^=(1<<pos);
-    printf("\nToggle Data=%d",data);
-}
+#define set(reg_val,n)        reg_val |= (1 << n)
+#define Reset(reg_val,n)      reg_val &= ~(1 << n)
+#define Toggle(reg_val,n)     reg_val ^= (1 << n)
+
 int main()
 {
-   // printf("Hello World");
-   Set_Clear_Toggle(8,4);
-   
-    return 0;
+uint32_t data= 0xA;
+ printf("0x%x\n",set(data,0));
+ printf("0x%x\n",Reset(data,1));
+ printf("0x%x",Toggle(data,3));
+ return 0;
 }
