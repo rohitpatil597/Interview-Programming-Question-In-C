@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define max(num1,num2,num3)   ((num1 > num2 && num1 > num3) ? num1 : ((num2 > num3)? num2 :num3))
+#define max(num1,num2,num3)   ((num1 > num2 && num1 > num3) ? num1 : ((num2 > num3)? num2 :num3)) //?-If and :-else
 #define min(num1,num2,num3)   ((num1 < num2 && num1 < num3) ? num1 : ((num2 < num3)? num2 :num3))
 int main()
 {
