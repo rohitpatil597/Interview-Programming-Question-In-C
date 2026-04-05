@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-#define max(a,b,c)   ((a) >= (b) && (a) >= (c) ? a : ((b) >= (c) && (b) >= (a) ? b : (c)))
-#define min(a,b,c)   ((a) <= (b) && (a) <= (c) ? a : ((b) <= (c) && (b) <= (a) ? b : (c)))
-
+#define max(num1,num2,num3)   ((num1 > num2 && num1 > num3) ? num1 : ((num2 > num3)? num2 :num3))
+#define min(num1,num2,num3)   ((num1 < num2 && num1 < num3) ? num1 : ((num2 < num3)? num2 :num3))
 int main()
 {
-    printf("%d",min(12,9,84));
-
+    
+    printf("%d",min(1,4,0));
     return 0;
 }
